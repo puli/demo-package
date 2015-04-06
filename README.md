@@ -1,8 +1,8 @@
 A Puli Demo Package
 ===================
 
-This repository contains a demo application showing how to use [Puli] in a
-reusable Composer package together with [Twig] and [Gulp JS].
+This repository contains a demo showing how to use [Puli] in a reusable Composer
+package together with [Twig] and [Gulp JS].
 
 Run the following commands after cloning the repository:
 
