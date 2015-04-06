@@ -1,0 +1,21 @@
+{
+    "name": "puli/demo-package",
+    "description": "A demo package showcasing the use of the Puli resource manager in a reusable Composer package.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bernhard Schussek",
+            "email": "bschussek@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Puli\\DemoPackage\\": "src/" }
+    },
+    "require": {
+        "twig/twig": "~1.18",
+        "puli/cli": "~1.0",
+        "puli/asset-plugin": "~1.0",
+        "puli/twig-extension": "~1.0@dev"
+    },
+    "minimum-stability": "dev"
+}
