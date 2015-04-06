@@ -16,7 +16,7 @@ $ vendor/bin/puli asset install
 Building your Own
 -----------------
 
-If you want to build this demo application from scratch, follow these steps:
+If you want to build this demo package from scratch, follow these steps:
 
 1. Create the basic directory layout
 2. Copy `composer.json`, `package.json` and `Gulpfile.js` to the project
