@@ -5,9 +5,9 @@
         "/puli/demo-package": "res"
     },
     "bindings": {
-        "23f6c21c-15a2-4bbb-8a3d-7e9858c6a623": {
+        "bea599d5-6a10-4cb2-9cf8-860832dc2ea7": {
             "query": "/puli/demo-package/public{,/**/*}",
-            "type": "puli/asset-mapping",
+            "type": "puli/asset",
             "parameters": {
                 "path": "/demo",
                 "target": "default"
