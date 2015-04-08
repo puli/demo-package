@@ -1,7 +1,7 @@
 {
     "version": "1.0",
     "name": "puli/demo-package",
-    "resources": {
+    "path-mappings": {
         "/puli/demo-package": "res"
     },
     "bindings": {
