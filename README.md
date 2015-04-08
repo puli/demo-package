@@ -27,7 +27,7 @@ If you want to build this demo package from scratch, follow these steps:
 7. Run `gulp`
 8. Run `vendor/bin/puli plugin install Puli\\AssetPlugin\\Api\\AssetPlugin`
 9. Run `vendor/bin/puli map /puli/demo-package res` to map the Puli path `/puli/demo-package` to the `res` directory
-10. Run `vendor/bin/puli asset map /puli/demo-package/public /demo` to map your assets to the `/demo` directory of the default install target
+10. Run `vendor/bin/puli asset map -f /puli/demo-package/public /demo` to map your assets to the `/demo` directory of the default install target
 
 [Puli]: http://puli.io
 [Silex]: http://silex.sensiolabs.org
