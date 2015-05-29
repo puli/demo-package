@@ -25,11 +25,11 @@ If you want to build this demo package from scratch, follow these steps:
 5. Put your SCSS files into `res/scss/`
 6. Put your Javascript files into `res/js/`
 7. Run `gulp`
-8. Run `vendor/bin/puli plugin install Puli\\AssetPlugin\\Api\\AssetPlugin`
-9. Run `vendor/bin/puli map /puli/demo-package res` to map the Puli path `/puli/demo-package` to the `res` directory
-10. Run `vendor/bin/puli asset map -f /puli/demo-package/public /demo` to map your assets to the `/demo` directory of the default install target
+8. Download [`puli.phar`]
+9. Run `php puli.phar map /puli/demo-package res` to map the Puli path `/puli/demo-package` to the `res` directory
 
 [Puli]: http://puli.io
 [Silex]: http://silex.sensiolabs.org
 [Twig]: http://twig.sensiolabs.org
 [Gulp JS]: http://gulpjs.com
+[`puli.phar`]: https://github.com/puli/cli/releases
