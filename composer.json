@@ -12,8 +12,11 @@
         "psr-4": { "Puli\\DemoPackage\\": "src/" }
     },
     "require": {
-        "twig/twig": "~1.18",
-        "puli/twig-extension": "~1.0"
+        "twig/twig": "^1.18",
+        "puli/twig-extension": "^1.0-beta6"
+    },
+    "require-dev": {
+        "puli/composer-plugin": "^1.0-beta7"
     },
     "minimum-stability": "beta"
 }
