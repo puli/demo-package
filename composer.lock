@@ -8,30 +8,32 @@
     "packages": [
         {
             "name": "puli/repository",
-            "version": "1.0.0-beta5",
+            "version": "1.0.0-beta6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/puli/repository.git",
-                "reference": "f203ab487f703b3e24e9dff8479ce440d2e67e03"
+                "reference": "4137bc4c8063e5844cd231c947d4a6a8136306c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/puli/repository/zipball/f203ab487f703b3e24e9dff8479ce440d2e67e03",
-                "reference": "f203ab487f703b3e24e9dff8479ce440d2e67e03",
+                "url": "https://api.github.com/repos/puli/repository/zipball/4137bc4c8063e5844cd231c947d4a6a8136306c7",
+                "reference": "4137bc4c8063e5844cd231c947d4a6a8136306c7",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9",
                 "webmozart/assert": "~1.0",
-                "webmozart/glob": "~2.0",
+                "webmozart/glob": "~3.0",
                 "webmozart/path-util": "~2.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.6",
-                "symfony/filesystem": "~2.0"
+                "symfony/filesystem": "~2.0",
+                "webmozart/key-value-store": "~1.0@beta"
             },
             "suggest": {
-                "symfony/filesystem": "to use the FilesystemRepository"
+                "symfony/filesystem": "to use the FilesystemRepository",
+                "webmozart/key-value-store": "~1.0@beta"
             },
             "type": "library",
             "extra": {
@@ -56,32 +58,32 @@
             ],
             "description": "A filesystem-like repository for storing arbitrary resources.",
             "homepage": "http://puli.io",
-            "time": "2015-05-29 09:21:52"
+            "time": "2015-08-12 11:54:29"
         },
         {
             "name": "puli/twig-extension",
-            "version": "1.0.0-beta4",
+            "version": "1.0.0-beta5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/puli/twig-extension.git",
-                "reference": "0aa56204f3c499ba926002edfe53febfe86a1bd4"
+                "reference": "051f7a8f4561b8b2a9df0e435862f28f5def152a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/puli/twig-extension/zipball/0aa56204f3c499ba926002edfe53febfe86a1bd4",
-                "reference": "0aa56204f3c499ba926002edfe53febfe86a1bd4",
+                "url": "https://api.github.com/repos/puli/twig-extension/zipball/051f7a8f4561b8b2a9df0e435862f28f5def152a",
+                "reference": "051f7a8f4561b8b2a9df0e435862f28f5def152a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9",
-                "puli/repository": "~1.0",
-                "twig/twig": "~1.0",
-                "webmozart/path-util": "~2.0"
+                "puli/repository": "^1.0",
+                "twig/twig": "^1.0",
+                "webmozart/path-util": "^2.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.6",
-                "puli/url-generator": "~1.0",
-                "symfony/http-kernel": "~2.3"
+                "puli/url-generator": "^1.0",
+                "symfony/http-kernel": "^2.3"
             },
             "suggest": {
                 "puli/url-generator": "Enables the resource_url() function"
@@ -109,29 +111,33 @@
             ],
             "description": "A Puli extension for the Twig templating system.",
             "homepage": "http://puli.io",
-            "time": "2015-05-29 13:21:04"
+            "time": "2015-08-12 14:12:06"
         },
         {
             "name": "twig/twig",
-            "version": "v1.18.1",
+            "version": "v1.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "9f70492f44398e276d1b81c1b43adfe6751c7b7f"
+                "reference": "913d282caca9ee0e8d05940c6caa486d58810dd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9f70492f44398e276d1b81c1b43adfe6751c7b7f",
-                "reference": "9f70492f44398e276d1b81c1b43adfe6751c7b7f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/913d282caca9ee0e8d05940c6caa486d58810dd4",
+                "reference": "913d282caca9ee0e8d05940c6caa486d58810dd4",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.7"
             },
+            "require-dev": {
+                "symfony/debug": "~2.7",
+                "symfony/phpunit-bridge": "~2.7"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-master": "1.21-dev"
                 }
             },
             "autoload": {
@@ -166,24 +172,27 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-04-19 08:30:27"
+            "time": "2015-08-24 09:51:18"
         },
         {
             "name": "webmozart/assert",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "b8ef76d0f0c3b9a0a1bc987085fe0a0ddba984ab"
+                "reference": "30eed06dd6bc88410a4ff7f77b6d22f3ce13dbde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/b8ef76d0f0c3b9a0a1bc987085fe0a0ddba984ab",
-                "reference": "b8ef76d0f0c3b9a0a1bc987085fe0a0ddba984ab",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/30eed06dd6bc88410a4ff7f77b6d22f3ce13dbde",
+                "reference": "30eed06dd6bc88410a4ff7f77b6d22f3ce13dbde",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6"
             },
             "type": "library",
             "extra": {
@@ -212,34 +221,34 @@
                 "check",
                 "validate"
             ],
-            "time": "2015-05-12 15:19:25"
+            "time": "2015-08-24 13:29:44"
         },
         {
             "name": "webmozart/glob",
-            "version": "2.0.1",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/glob.git",
-                "reference": "ef7560987355bbaf53f3ba1efbf2395dc84170ff"
+                "reference": "44fd5671153c550a0b772d8f819bff7d913e646f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/glob/zipball/ef7560987355bbaf53f3ba1efbf2395dc84170ff",
-                "reference": "ef7560987355bbaf53f3ba1efbf2395dc84170ff",
+                "url": "https://api.github.com/repos/webmozart/glob/zipball/44fd5671153c550a0b772d8f819bff7d913e646f",
+                "reference": "44fd5671153c550a0b772d8f819bff7d913e646f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "webmozart/path-util": "~2.0"
+                "webmozart/path-util": "^2.2"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.6",
-                "symfony/filesystem": "~2.5"
+                "symfony/filesystem": "^2.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -258,20 +267,20 @@
                 }
             ],
             "description": "A PHP implementation of Ant's glob.",
-            "time": "2015-05-21 10:47:50"
+            "time": "2015-08-24 13:32:28"
         },
         {
             "name": "webmozart/path-util",
-            "version": "2.0.0",
+            "version": "2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/path-util.git",
-                "reference": "ff82d231236bec95020c7d2bfa10780402b0cbeb"
+                "reference": "f1c8da76b3ed86a43058fa68f59c0e4f90c69f27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/path-util/zipball/ff82d231236bec95020c7d2bfa10780402b0cbeb",
-                "reference": "ff82d231236bec95020c7d2bfa10780402b0cbeb",
+                "url": "https://api.github.com/repos/webmozart/path-util/zipball/f1c8da76b3ed86a43058fa68f59c0e4f90c69f27",
+                "reference": "f1c8da76b3ed86a43058fa68f59c0e4f90c69f27",
                 "shasum": ""
             },
             "require": {
@@ -284,7 +293,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "2.3-dev"
                 }
             },
             "autoload": {
@@ -303,7 +312,7 @@
                 }
             ],
             "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
-            "time": "2015-05-21 10:43:18"
+            "time": "2015-08-24 17:27:41"
         }
     ],
     "packages-dev": [],
