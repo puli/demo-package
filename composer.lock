@@ -4,36 +4,136 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "de2f3b67eccd864f6b701ecb6675c578",
+    "hash": "1745c724e3ca00cc97b2b0e25c48c447",
+    "content-hash": "3e1d79b3740a4c1490866b0e5b249a03",
     "packages": [
         {
-            "name": "puli/repository",
-            "version": "1.0.0-beta7",
+            "name": "psr/log",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/puli/repository.git",
-                "reference": "d4871bc9911f10d7e78aa01ee875a525dfd413cf"
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/puli/repository/zipball/d4871bc9911f10d7e78aa01ee875a525dfd413cf",
-                "reference": "d4871bc9911f10d7e78aa01ee875a525dfd413cf",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Psr\\Log\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "puli/discovery",
+            "version": "1.0.0-beta9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/puli/discovery.git",
+                "reference": "3fcb42bbbf27e7baa6d978c93be966ee4c2f6085"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/puli/discovery/zipball/3fcb42bbbf27e7baa6d978c93be966ee4c2f6085",
+                "reference": "3fcb42bbbf27e7baa6d978c93be966ee4c2f6085",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9",
+                "php": "^5.3.9|^7.0",
+                "ramsey/uuid": "^2.8",
                 "webmozart/assert": "^1.0",
-                "webmozart/glob": "^3.1",
+                "webmozart/expression": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6",
+                "puli/repository": "^1.0-beta9",
+                "sebastian/version": "^1.0.1",
+                "webmozart/json": "^1.2",
+                "webmozart/key-value-store": "^1.0-beta7"
+            },
+            "suggest": {
+                "puli/repository": "to bind and discover Puli resources",
+                "webmozart/json": "to use the JSON discovery",
+                "webmozart/key-value-store": "to use the key-value store discovery"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Puli\\Discovery\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "Publishes and discovers artifacts across Puli packages.",
+            "homepage": "http://puli.io",
+            "time": "2016-01-14 10:18:41"
+        },
+        {
+            "name": "puli/repository",
+            "version": "1.0.0-beta9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/puli/repository.git",
+                "reference": "290afcb7eff49a031a6a4c2c2a8dbd180e86d6ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/puli/repository/zipball/290afcb7eff49a031a6a4c2c2a8dbd180e86d6ce",
+                "reference": "290afcb7eff49a031a6a4c2c2a8dbd180e86d6ce",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.9|^7.0",
+                "psr/log": "^1.0",
+                "webmozart/assert": "^1.0",
+                "webmozart/glob": "^4.1",
                 "webmozart/path-util": "^2.2"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.6",
-                "symfony/filesystem": "^2.0",
-                "webmozart/key-value-store": "^1.0.0-beta5"
+                "sebastian/version": "^1.0.1",
+                "symfony/filesystem": "^2.0|^3.0",
+                "webmozart/json": "^1.2.1",
+                "webmozart/key-value-store": "^1.0-beta7"
             },
             "suggest": {
-                "symfony/filesystem": "to use the FilesystemRepository",
-                "webmozart/key-value-store": "to use the path mapping repositories"
+                "symfony/filesystem": "to use the filesystem repository",
+                "webmozart/json": "to use the JSON repositories",
+                "webmozart/key-value-store": "to use the key-value store change stream"
             },
             "type": "library",
             "extra": {
@@ -58,35 +158,37 @@
             ],
             "description": "A filesystem-like repository for storing arbitrary resources.",
             "homepage": "http://puli.io",
-            "time": "2015-08-24 19:46:06"
+            "time": "2016-01-14 13:04:53"
         },
         {
             "name": "puli/twig-extension",
-            "version": "1.0.0-beta6",
+            "version": "1.0.0-beta8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/puli/twig-extension.git",
-                "reference": "8f72fa0b47ada12509833d83e72ce95896db54a6"
+                "reference": "41972f1b7330bec8481fd5ea2c30f52afa381730"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/puli/twig-extension/zipball/8f72fa0b47ada12509833d83e72ce95896db54a6",
-                "reference": "8f72fa0b47ada12509833d83e72ce95896db54a6",
+                "url": "https://api.github.com/repos/puli/twig-extension/zipball/41972f1b7330bec8481fd5ea2c30f52afa381730",
+                "reference": "41972f1b7330bec8481fd5ea2c30f52afa381730",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9",
-                "puli/repository": "^1.0-beta7",
+                "php": "^5.3.9|^7.0",
+                "puli/repository": "^1.0-beta9",
                 "twig/twig": "^1.20|^2.0",
                 "webmozart/path-util": "^2.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.6",
-                "puli/url-generator": "^1.0",
+                "puli/discovery": "^1.0-beta9",
+                "puli/url-generator": "^1.0-beta4",
+                "sebastian/version": "^1.0.1",
                 "symfony/http-kernel": "^2.3"
             },
             "suggest": {
-                "puli/url-generator": "Enables the resource_url() function"
+                "puli/url-generator": "to use the resource_url() function"
             },
             "type": "library",
             "extra": {
@@ -111,20 +213,143 @@
             ],
             "description": "A Puli extension for the Twig templating system.",
             "homepage": "http://puli.io",
-            "time": "2015-08-24 20:24:20"
+            "time": "2016-01-14 12:44:30"
         },
         {
-            "name": "twig/twig",
-            "version": "v1.21.0",
+            "name": "puli/url-generator",
+            "version": "1.0.0-beta4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twigphp/Twig.git",
-                "reference": "913d282caca9ee0e8d05940c6caa486d58810dd4"
+                "url": "https://github.com/puli/url-generator.git",
+                "reference": "b6c0bfb678dde9a2f8ece661f894c9f39e62dcc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/913d282caca9ee0e8d05940c6caa486d58810dd4",
-                "reference": "913d282caca9ee0e8d05940c6caa486d58810dd4",
+                "url": "https://api.github.com/repos/puli/url-generator/zipball/b6c0bfb678dde9a2f8ece661f894c9f39e62dcc2",
+                "reference": "b6c0bfb678dde9a2f8ece661f894c9f39e62dcc2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.9|^7.0",
+                "puli/discovery": "^1.0-beta9",
+                "puli/repository": "^1.0-beta9",
+                "webmozart/glob": "^4.0",
+                "webmozart/path-util": "^2.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Puli\\UrlGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "Generates URLs for public Puli resources.",
+            "homepage": "http://puli.io",
+            "keywords": [
+                "asset",
+                "public",
+                "puli",
+                "resource",
+                "url"
+            ],
+            "time": "2016-01-14 10:30:17"
+        },
+        {
+            "name": "ramsey/uuid",
+            "version": "2.8.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ramsey/uuid.git",
+                "reference": "805d8e1894c52e5b1582e75ca8803a8d85650df9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/805d8e1894c52e5b1582e75ca8803a8d85650df9",
+                "reference": "805d8e1894c52e5b1582e75ca8803a8d85650df9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "replace": {
+                "rhumsaa/uuid": "self.version"
+            },
+            "require-dev": {
+                "doctrine/dbal": ">=2.3",
+                "jakub-onderka/php-parallel-lint": "^0.9.0",
+                "moontoast/math": "~1.1",
+                "phpunit/phpunit": "~4.1|~5.0",
+                "satooshi/php-coveralls": "~0.6",
+                "squizlabs/php_codesniffer": "^2.3",
+                "symfony/console": "~2.3|~3.0"
+            },
+            "suggest": {
+                "doctrine/dbal": "Allow the use of a UUID as doctrine field type.",
+                "moontoast/math": "Support for converting UUID to 128-bit integer (in string form).",
+                "symfony/console": "Support for use of the bin/uuid command line tool."
+            },
+            "bin": [
+                "bin/uuid"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rhumsaa\\Uuid\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Huizendveld",
+                    "email": "marijn.huizendveld@gmail.com"
+                },
+                {
+                    "name": "Ben Ramsey",
+                    "homepage": "http://benramsey.com"
+                }
+            ],
+            "description": "A PHP 5.3+ library for generating RFC 4122 version 1, 3, 4, and 5 universally unique identifiers (UUID).",
+            "homepage": "https://github.com/ramsey/uuid",
+            "keywords": [
+                "guid",
+                "identifier",
+                "uuid"
+            ],
+            "time": "2015-12-17 16:54:24"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v1.23.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "ae53fc2c312fdee63773b75cb570304f85388b08"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ae53fc2c312fdee63773b75cb570304f85388b08",
+                "reference": "ae53fc2c312fdee63773b75cb570304f85388b08",
                 "shasum": ""
             },
             "require": {
@@ -137,7 +362,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.21-dev"
+                    "dev-master": "1.23-dev"
                 }
             },
             "autoload": {
@@ -172,7 +397,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-08-24 09:51:18"
+            "time": "2016-01-11 14:02:19"
         },
         {
             "name": "webmozart/assert",
@@ -224,31 +449,83 @@
             "time": "2015-08-24 13:29:44"
         },
         {
-            "name": "webmozart/glob",
-            "version": "3.1.1",
+            "name": "webmozart/expression",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/glob.git",
-                "reference": "44fd5671153c550a0b772d8f819bff7d913e646f"
+                "url": "https://github.com/webmozart/expression.git",
+                "reference": "35c222fc49533894228e1240cc844ae91d6a9ef2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/glob/zipball/44fd5671153c550a0b772d8f819bff7d913e646f",
-                "reference": "44fd5671153c550a0b772d8f819bff7d913e646f",
+                "url": "https://api.github.com/repos/webmozart/expression/zipball/35c222fc49533894228e1240cc844ae91d6a9ef2",
+                "reference": "35c222fc49533894228e1240cc844ae91d6a9ef2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3",
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webmozart\\Expression\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "Formulate expressions and search criteria using PHP objects.",
+            "keywords": [
+                "criteria",
+                "expression",
+                "filter",
+                "formula"
+            ],
+            "time": "2015-12-17 10:43:13"
+        },
+        {
+            "name": "webmozart/glob",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozart/glob.git",
+                "reference": "3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozart/glob/zipball/3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe",
+                "reference": "3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3|^7.0",
                 "webmozart/path-util": "^2.2"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1",
                 "symfony/filesystem": "^2.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -267,20 +544,20 @@
                 }
             ],
             "description": "A PHP implementation of Ant's glob.",
-            "time": "2015-08-24 13:32:28"
+            "time": "2015-12-29 11:14:33"
         },
         {
             "name": "webmozart/path-util",
-            "version": "2.2.2",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/path-util.git",
-                "reference": "f1c8da76b3ed86a43058fa68f59c0e4f90c69f27"
+                "reference": "d939f7edc24c9a1bb9c0dee5cb05d8e859490725"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/path-util/zipball/f1c8da76b3ed86a43058fa68f59c0e4f90c69f27",
-                "reference": "f1c8da76b3ed86a43058fa68f59c0e4f90c69f27",
+                "url": "https://api.github.com/repos/webmozart/path-util/zipball/d939f7edc24c9a1bb9c0dee5cb05d8e859490725",
+                "reference": "d939f7edc24c9a1bb9c0dee5cb05d8e859490725",
                 "shasum": ""
             },
             "require": {
@@ -288,7 +565,8 @@
                 "webmozart/assert": "~1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.6"
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
             },
             "type": "library",
             "extra": {
@@ -312,39 +590,107 @@
                 }
             ],
             "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
-            "time": "2015-08-24 17:27:41"
+            "time": "2015-12-17 08:42:14"
         }
     ],
     "packages-dev": [
         {
-            "name": "puli/composer-plugin",
-            "version": "1.0.0-beta7",
+            "name": "justinrainbow/json-schema",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/puli/composer-plugin.git",
-                "reference": "0dff06ecc96d8d281b78b85558a5208cc39dab5a"
+                "url": "https://github.com/justinrainbow/json-schema.git",
+                "reference": "f9e27c3e202faf14fd581ef41355d83bb4b7eb7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/puli/composer-plugin/zipball/0dff06ecc96d8d281b78b85558a5208cc39dab5a",
-                "reference": "0dff06ecc96d8d281b78b85558a5208cc39dab5a",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/f9e27c3e202faf14fd581ef41355d83bb4b7eb7d",
+                "reference": "f9e27c3e202faf14fd581ef41355d83bb4b7eb7d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "json-schema/json-schema-test-suite": "1.1.0",
+                "phpdocumentor/phpdocumentor": "~2",
+                "phpunit/phpunit": "~3.7"
+            },
+            "bin": [
+                "bin/validate-json"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JsonSchema\\": "src/JsonSchema/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Prieto Reis",
+                    "email": "bruno.p.reis@gmail.com"
+                },
+                {
+                    "name": "Justin Rainbow",
+                    "email": "justin.rainbow@gmail.com"
+                },
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                },
+                {
+                    "name": "Robert Schönthal",
+                    "email": "seroscho@googlemail.com"
+                }
+            ],
+            "description": "A library to validate a json schema.",
+            "homepage": "https://github.com/justinrainbow/json-schema",
+            "keywords": [
+                "json",
+                "schema"
+            ],
+            "time": "2016-01-06 14:37:04"
+        },
+        {
+            "name": "puli/composer-plugin",
+            "version": "1.0.0-beta9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/puli/composer-plugin.git",
+                "reference": "a807314893420bd6c33402e7e9b01448748f3618"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/puli/composer-plugin/zipball/a807314893420bd6c33402e7e9b01448748f3618",
+                "reference": "a807314893420bd6c33402e7e9b01448748f3618",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0",
-                "puli/discovery": "^1.0-beta7",
-                "puli/repository": "^1.0-beta7",
-                "puli/url-generator": "^1.0-beta2",
-                "symfony/process": "^2.3",
+                "php": "^5.3.9|^7.0",
+                "puli/discovery": "^1.0-beta9",
+                "puli/repository": "^1.0-beta9",
+                "puli/url-generator": "^1.0-beta4",
+                "symfony/process": "^2.3|^3.0",
                 "webmozart/assert": "^1.0",
-                "webmozart/key-value-store": "^1.0-beta5",
+                "webmozart/json": "^1.2.2",
                 "webmozart/path-util": "^2.2"
             },
             "require-dev": {
                 "composer/composer": "^1.0-alpha10",
                 "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1",
                 "symfony/filesystem": "^2.3",
-                "webmozart/glob": "^3.1"
+                "webmozart/glob": "^4.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -370,44 +716,32 @@
             ],
             "description": "Integrates Composer into the Puli package manager.",
             "homepage": "http://puli.io",
-            "time": "2015-08-24 20:29:45"
+            "time": "2016-01-14 12:40:31"
         },
         {
-            "name": "puli/discovery",
-            "version": "1.0.0-beta7",
+            "name": "seld/jsonlint",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/puli/discovery.git",
-                "reference": "5e61c5d6c4d6f49ac24ae490e6a180b74440e729"
+                "url": "https://github.com/Seldaek/jsonlint.git",
+                "reference": "66834d3e3566bb5798db7294619388786ae99394"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/puli/discovery/zipball/5e61c5d6c4d6f49ac24ae490e6a180b74440e729",
-                "reference": "5e61c5d6c4d6f49ac24ae490e6a180b74440e729",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/66834d3e3566bb5798db7294619388786ae99394",
+                "reference": "66834d3e3566bb5798db7294619388786ae99394",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9",
-                "puli/repository": "^1.0",
-                "webmozart/assert": "^1.0",
-                "webmozart/glob": ">=2.0,<4.0"
+                "php": "^5.3 || ^7.0"
             },
-            "require-dev": {
-                "phpunit/phpunit": "^4.6",
-                "webmozart/key-value-store": "^1.0.0-beta5"
-            },
-            "suggest": {
-                "webmozart/key-value-store": "to use the KeyValueStoreDiscovery"
-            },
+            "bin": [
+                "bin/jsonlint"
+            ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "Puli\\Discovery\\": "src/"
+                    "Seld\\JsonLint\\": "src/Seld/JsonLint/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -416,99 +750,50 @@
             ],
             "authors": [
                 {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
                 }
             ],
-            "description": "Discovers Puli resources bound to predefined types.",
-            "homepage": "http://puli.io",
-            "time": "2015-08-24 19:50:55"
-        },
-        {
-            "name": "puli/url-generator",
-            "version": "1.0.0-beta2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/puli/url-generator.git",
-                "reference": "4b5d61f314d556b97085ddfd2666995705473527"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/puli/url-generator/zipball/4b5d61f314d556b97085ddfd2666995705473527",
-                "reference": "4b5d61f314d556b97085ddfd2666995705473527",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9",
-                "puli/discovery": "^1.0",
-                "puli/repository": "^1.0",
-                "webmozart/glob": ">=2.0,<4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.6"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Puli\\UrlGenerator\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
-                }
-            ],
-            "description": "Generates URLs for public Puli resources.",
-            "homepage": "http://puli.io",
+            "description": "JSON Linter",
             "keywords": [
-                "asset",
-                "public",
-                "puli",
-                "resource",
-                "url"
+                "json",
+                "linter",
+                "parser",
+                "validator"
             ],
-            "time": "2015-08-12 12:01:39"
+            "time": "2015-11-21 02:21:41"
         },
         {
             "name": "symfony/process",
-            "version": "v2.7.3",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Process.git",
-                "reference": "48aeb0e48600321c272955132d7606ab0a49adb3"
+                "url": "https://github.com/symfony/process.git",
+                "reference": "f4794f1d00f0746621be3020ffbd8c5e0b217ee3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/48aeb0e48600321c272955132d7606ab0a49adb3",
-                "reference": "48aeb0e48600321c272955132d7606ab0a49adb3",
+                "url": "https://api.github.com/repos/symfony/process/zipball/f4794f1d00f0746621be3020ffbd8c5e0b217ee3",
+                "reference": "f4794f1d00f0746621be3020ffbd8c5e0b217ee3",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "~2.7"
+                "php": ">=5.5.9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Process\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -526,47 +811,42 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2015-07-01 11:25:50"
+            "time": "2015-12-23 11:04:02"
         },
         {
-            "name": "webmozart/key-value-store",
-            "version": "1.0.0-beta5",
+            "name": "webmozart/json",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/key-value-store.git",
-                "reference": "95881caf0a2848d019948f664f86ed88e6a4c65e"
+                "url": "https://github.com/webmozart/json.git",
+                "reference": "a1fb3da904b8364e3db47eed68f76bfb6cd0031a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/key-value-store/zipball/95881caf0a2848d019948f664f86ed88e6a4c65e",
-                "reference": "95881caf0a2848d019948f664f86ed88e6a4c65e",
+                "url": "https://api.github.com/repos/webmozart/json/zipball/a1fb3da904b8364e3db47eed68f76bfb6cd0031a",
+                "reference": "a1fb3da904b8364e3db47eed68f76bfb6cd0031a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3",
-                "webmozart/assert": "~1.0"
+                "justinrainbow/json-schema": "^1.6",
+                "php": "^5.3.3|^7.0",
+                "seld/jsonlint": "^1.0",
+                "webmozart/path-util": "^2.3"
             },
             "require-dev": {
-                "basho/riak": "~1.4",
-                "doctrine/cache": "~1.4",
                 "phpunit/phpunit": "^4.6",
-                "predis/predis": "~1.0",
-                "symfony/filesystem": "~2.5"
-            },
-            "suggest": {
-                "basho/riak": "To enable the RiakStore",
-                "doctrine/cache": "To enable the CachedStore",
-                "predis/predis": "To enable the PredisStore"
+                "sebastian/version": "^1.0.1",
+                "symfony/filesystem": "^2.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Webmozart\\KeyValueStore\\": "src/"
+                    "Webmozart\\Json\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -579,13 +859,16 @@
                     "email": "bschussek@gmail.com"
                 }
             ],
-            "description": "A key-value store API with implementations for different backends.",
-            "time": "2015-08-11 15:02:30"
+            "description": "A robust JSON decoder/encoder with support for schema validation.",
+            "time": "2016-01-14 12:11:46"
         }
     ],
     "aliases": [],
-    "minimum-stability": "beta",
+    "minimum-stability": "stable",
     "stability-flags": {
+        "puli/repository": 10,
+        "puli/discovery": 10,
+        "puli/url-generator": 10,
         "puli/twig-extension": 10,
         "puli/composer-plugin": 10
     },
